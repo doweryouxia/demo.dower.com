@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>双录电子保单平台</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+    <link href="../../style/style2.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bodybg bdh">
+<header class="header"><h1>保费比价</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<ul class="rateul" id="ulBaojia">
+    
+</ul>
+<footer class="ratefot cent">
+    <a href="###" id="updateInsur">修改险种</a><a href="###" class="sel" id="next">确认投保</a>
+</footer>
+</body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/getUrl.js"></script>
+<script src="../../js/order/premiumRate.js"></script>
+<!--<script src='js/form.js' type="text/javascript"></script>-->
+<script>
+    $(function() {
+        $('.rateul li').each(function(index) {
+          $(this).children('div.ratelidiv1').click(function() {
+             /* if($(this).children('span').hasClass('checkps1')){*/
+              $('.rateul li .ratelidiv1 p.checkp').find('input').attr('checked',false);
+              $('.rateul li .ratelidiv1 p.checkp').children('span').addClass('checkps1');
+              $('.rateul li').removeClass('ratelisel')
+              $('.rateul li .ratelidiv1').nextAll('.ratelidiv').slideUp();
+                  $(this).children('p.checkp').find('input').attr('checked',true);
+                  $(this).children('p.checkp').children('span').removeClass('checkps1');
+                  $(this).children('p.checkp').parents('li').addClass('ratelisel')
+                  $(this).children('p.checkp').parent('.ratelidiv1').nextAll('.ratelidiv').slideDown();
+
+          });
+          /*$(this).children('.ratelidiv').children('.shq').click(function() {
+              $(this).parent('.ratelidiv').prevAll('.ratelidiv1').children('p.checkp').children('input').attr('checked',false);
+              $(this).parent('.ratelidiv').prevAll('.ratelidiv1').children('p.checkp').children('span').addClass('checkps1');
+              $(this).parents('li').removeClass('ratelisel')
+              $(this).parent('.ratelidiv').slideUp();
+          });*/
+            $(this).children('.ratelidiv').children('.shq1').click(function(){
+                if($(this).children('em').html()=='查看详情'){
+                    $(this).prevAll('.ratexq').slideDown();
+                    $(this).children('img').attr('src','images/icon53.png');
+                    $(this).removeClass('shq1').addClass('shq');
+                    $(this).children('em').html('收起');}else{
+                    $(this).prevAll('.ratexq').slideUp('slow');
+                    $(this).children('img').attr('src','images/icon54.png');
+                    $(this).removeClass('shq').addClass('shq1');
+                    $(this).children('em').html('查看详情');
+                }
+            })
+        })
+    })
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>出单</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bodybg mb bdh">
+<header class="header"><h1>出单</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<div class="issuediv">
+       <p><span class="isspanl">保单号：</span><span class="isspanr" id="baoDanNo">--</span></p>
+       <p><span class="isspanl">被保险人：</span><span class="isspanr" id="VC2_POST_NAME"></span></p>
+       <p><span class="isspanl">车牌号：</span><span class="isspanr" id="carNo">--</span></p>
+       <p><span class="isspanl">商业险开始时间：</span><i class="isspanr" id="bizDate"></i></p>
+       <p><span class="isspanl">交强险开始时间：</span><i class="isspanr" id="forceDate"></i></p>
+       <p><span class="isspanl">保险总价合计：</span><span class="isspanr" id="total"></span></p>
+    <!-- <p class=" detailsp"><a href="javascript:void(0)" class=""><i></i><span>保单预览</span></a></p> -->
+</div>
+<article class="issueinfo">
+    <ul>
+        <li><span>手机号码：</span><input type="text" placeholder="请输入或自动带出" /></li>
+        <li><span>邮箱地址：</span><input type="text" placeholder="请输入或自动带出" /></li>
+    </ul>
+</article>
+<button class="lgbtn">发送</button>
+<!--出单成功弹框-->
+<div class="lady"></div>
+<div class="issuesuccess bodybg">
+    <header><a href="###"></a>购买成功</header>
+    <p>本保单投递已完成，购买流程已结束，感谢您的使用！</p>
+    <button id="btnId" type="button">确定</button>
+</div>
+<article class="fotmenu">
+    <a href="javascript:void(0)" class="fotmenua01" id="indexBtn"><i></i><span>首页</span></a>
+    <a href="javascript:void(0)" class="fotmenua02 selea" id="carInfoBtn"><i></i><span>出单</span></a>
+    <a href="javascript:void(0)" class="fotmenua03" id="findBtn"><i></i><span>发现</span></a>
+    <a href="javascript:void(0)" class="fotmenua04" id="mineBtn"><i></i><span>我的</span></a>
+</article>
+</body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/form.js"></script>
+<script src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/getUrl.js"></script>
+<script src="../../js/quote/issue.js"></script>

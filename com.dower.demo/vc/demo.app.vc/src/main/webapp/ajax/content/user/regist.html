@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>注册</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+	<link href="../../style/style2.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bodybg mb">
+<header class="header"><h1>注册</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><!-- <a href="###" class="headicon"></a> --></header>
+<input type="hidden"  id="m_TelImei" value=""/>
+<input type="hidden"  id="m_Code" value=""/>
+<input type="hidden"  id="m_SysImei" value=""/>
+<input type="hidden"  id="m_SysVersion" value=""/>
+<input type="hidden"  id="m_TelModel" value=""/>
+<ul class="lgul regul">
+    <li class="lgbg"><i class="regname"></i><input type="number" placeholder="请输注册手机号" id="agencyTel" />
+                      <a href="javascript:;" class="send1" onclick="sends.send();">发送验证码</a></li>
+    <li class="lgbg"><i class="regpsw"></i><input type="password" placeholder="请输入验证码" id="codeId"/></li>
+    <li class="regf"><p class="pf1">注册须知：</p>
+                    <p class="pf2">1. 注册用户账户与当前手机串号绑定</p>
+                    <p class="pf2">2. 当前注册账户只能在当前手机上登录</p>
+                    <p class="pf2">3. 如果注册用户更换使用手机时，需要进行<br>
+                      　解绑、重绑过程。</p></li>
+    <li class="lgbg"><i class="usepsw"></i><input type="password" placeholder="请输入新密码" id="logPwd"/></li>
+    <li class="lgbg"><i class="usepsw"></i><input type="password" placeholder="重新输入新密码"  id="logPwd1"/></li>
+</ul>
+<button class="lgbtn">注册</button>
+<!-- <div class="footer">
+    <p class="copyright">Copyright © 2016-2020   All Rights Reserved</p>
+</div> -->
+<!-- <article class="fotmenu">
+    <a href="javascript:void(0)" class="fotmenua01 selea" id="indexBtn"><i></i><span>首页</span></a>
+    <a href="javascript:void(0)" class="fotmenua02" id="carInfoBtn"><i></i><span>出单</span></a>
+    <a href="javascript:void(0)" class="fotmenua03" id="findBtn"><i></i><span>发现</span></a>
+    <a href="javascript:void(0)" class="fotmenua04" id="mineBtn"><i></i><span>我的</span></a>
+</article> -->
+<div class="lady"></div>
+<div class="popbox" style="display:none">
+ <p id="messageId"></p>
+ <article class="cent"><a href="javascript:void(0)" class="mqd">确定</a></article>
+</div>
+</body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/getUrl.js"></script>
+<script src="../../js/interface.js"></script>
+<script src="../../js/user/reg.js"></script>

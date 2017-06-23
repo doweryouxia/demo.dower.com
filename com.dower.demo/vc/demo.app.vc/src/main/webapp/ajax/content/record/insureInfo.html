@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>双录电子保单平台</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+    <link href="../../style/style2.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bodybg bdh">
+<header class="header"><h1>投保信息</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="javascript:void(0)" class="headicon"></a></header>
+<h3 class="insuranth">被保险人信息</h3>
+<ul class="carinfoul carinfoul2">
+    <li>
+        <p class="photop">身份证照片：</p>
+        <article>
+        	<div class="photodiv" id="frontBtn"><img src="../../images/img01.png" alt="" id="idCardFront" height="97px"><input type="hidden" id="vc2FrontPath"></div>
+        	<div class="photodiv" id="backBtn"><img src="../../images/img02.png" alt="" id="idCardBack" height="97px"><input type="hidden" id="vc2BackPath"></div>
+        </article>
+        <p class="photop1"><i></i>调整拍摄角度，避免反光影响，确保图像清晰。</p>
+    </li>
+    <li>
+        <span class="salaslisp">被保险人姓名</span><input type="text" placeholder="请填写" id="vc2Insured"/>
+    </li>
+    <li> 
+        <span class="salaslisp">身份证号</span><input type="text" placeholder="请填写" id="vc2Code"/>
+    </li>
+    <li>
+        <span class="salaslisp">手机号</span><input type="text" placeholder="请填写" id="vc2Tel"/>
+    </li>
+    <li>
+        <span class="salaslisp">邮箱</span><input type="text" placeholder="请填写" id="vc2Mail"/>
+    </li>
+</ul>
+<h3 class="insuranth">投保人信息</h3>
+<ul class="carinfoul carinfoul1">
+    <li>
+        <span class="salaslisp">同被保险人</span>
+    </li>
+</ul>
+<button type="button" class="confirmbtn" id="confirmBtn">确认</button>
+<!--弹出框-->
+<div class="lady"></div>
+<div class="popbox" style="display:none">
+ <p id="messageId"></p>
+ <article class="cent"><a href="javascript:void(0)" class="mqd">确定</a></article>
+</div>
+<!--弹出框-->
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/getUrl.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/interface.js"></script>
+<script src="../../js/record/insureInfo.js"></script>
+
+</body>
+</html>
+

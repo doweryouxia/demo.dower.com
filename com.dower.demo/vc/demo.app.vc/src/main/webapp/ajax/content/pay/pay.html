@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>支付方式</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+    <link href="../../style/style2.css" type="text/css" rel="stylesheet" />
+</head>
+<!-- <body class="bodybg">
+<header class="header"><h1>支付方式</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a></header>
+<ul class="payul">
+    <a href="javascript:wxPay('0')"><li><i></i><img src="../../images/icon07.png" alt=""><p><span>微信支付</span><em>使用绑订的银行卡进行付款</em></p></li></a>
+    <a href="###"><li><i></i><img src="../../images/icon06.png" alt=""><p><span>支付宝支付</span><em>使用绑订的银行卡进行付款</em></p></li></a>
+    <a href="###"><li><i></i><img src="../../images/icon39.jpg" class="payliimg" alt=""><p><span>网银</span><em>使用网银进行付款</em></p></li></a>
+</ul>
+<article class="fotmenu">
+    <a href="javascript:void(0)" class="fotmenua01 selea" id="indexBtn"><i></i><span>首页</span></a>
+    <a href="javascript:void(0)" class="fotmenua02" id="carInfoBtn"><i></i><span>出单</span></a>
+    <a href="javascript:void(0)" class="fotmenua03" id="findBtn"><i></i><span>发现</span></a>
+    <a href="javascript:void(0)" class="fotmenua04" id="mineBtn"><i></i><span>我的</span></a>
+</article>
+</body> -->
+
+<body class="bodybg">
+<header class="header"><h1>支付方式</h1><a href="javascript:goHistory()" class="return"><i></i>返回</a></header>
+<article class="payselat">
+    <!-- <div class="payseldiv1"><p class="payselp1">订单提交成功</p><p class="payselp2">请在当日24点前完成支付，否则订单将被取消。</p></div>
+    <div class="payseldiv2">
+        <p>车船税：<i>350.00</i></p><p>交强险：<i>950.00</i></p><p>商业险：<i>5685.00</i></p>
+    </div>
+    <div class="payseldiv3">
+        <p  class="payselp3">保费金额：<i>￥6788.00</i></p><p  class="payselp4">投保单编号：<i>109999919919919</i></p>
+    </div> -->
+</article>
+<h3 class="choicetype">请选择支付方式</h3>
+<ul class="payul typeul">
+	<a href="javascript:wxPay('0')"><li><i></i><img src="../../images/icon07.png" alt=""><p><span>微信支付</span><em>使用绑订的银行卡进行付款</em></p></li></a>
+    <a href="###"><li><i></i><img src="../../images/icon06.png" alt=""><p><span>支付宝支付</span><em>使用绑订的银行卡进行付款</em></p></li></a>
+    <a href="###"><li><i></i><img src="../../images/icon39.jpg" class="payliimg" alt=""><p><span>网银</span><em>中国银联在线支付服务</em></p></li></a>
+</ul>
+<!--弹出框-->
+<div class="lady"></div>
+<div class="popbox" style="display:none" >
+	<p id="messageId"></p>
+   <!--  <p>交费后保单生效，请在我的中查询订单，并在当日24点前完成支付，否则订单将无法保留。</p> -->
+    <article class="cent"><!-- <a href="###" class="qd">确定离开</a><a href="###" class="qx">继续支付</a> --></article>
+</div>
+</body>
+</html>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/reg.js"></script>
+<script src="../../js/getUrl.js"></script>
+<script src="../../js/pay/pay.js"></script>

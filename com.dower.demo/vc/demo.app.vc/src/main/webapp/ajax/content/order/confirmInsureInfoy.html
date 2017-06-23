@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>出单</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+    <link href="../../style/style2.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bodybg mb1">
+<header class="header"><h1>确认投保信息</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<h3 class="confirm"><a href="###" id="updateCarInfo"><i></i>修改</a>车辆信息</h3>
+<div class="issuediv confirmdiv" id="carInfo">
+<!--        <p><span class="isspanl">车牌号：</span><span class="isspanr">京AQ1234</span></p>
+       <p><span class="isspanl">行驶证车主信息：</span><span class="isspanr">刘一手</span></p>
+       <p><span class="isspanl">车主身份证号：</span><span class="isspanr">364577584567337</span></p>
+       <p><span class="isspanl">车辆识别代码：</span><i class="isspanr">AQ123485676895</i></p>
+       <p><span class="isspanl">品牌型号：</span><i class="isspanr">一汽大众</i></p>
+       <p><span class="isspanl">发动机号：</span><span class="isspanr">6789909077788</span></p>
+       <p><span class="isspanl">车型：</span><i class="isspanr">大众迈腾7200 2017款</i></p>
+       <p><span class="isspanl">车座：</span><span class="isspanr" >5座</span></p>
+       <p><span class="isspanl">注册日期：</span><span class="isspanr" id="datRegDate">2017-1-1 </span></p> -->
+</div>
+
+<article class="issueinfo" id="issueinfo">
+    <!-- <h3 class="confirm"><a href="###"><i></i>修改</a>安盛太平财险</h3>
+    <ul class="isiul">
+        <li class="isili1"><em class="isiem1">￥5000.00</em><span class="isisp1">保费合计</span><span class="isisp2"></span></li>
+        <li class="isili1"><em class="isiem1 isiem2">￥450.00</em><span class="isisp1">车船税</span><span class="isisp2">同意交税</span></li>
+        <li class="isili1"><em class="isiem1 isiem2">￥950.00</em><span class="isisp1">交强险</span><span class="isisp2">2017-03-22 至 2018-03-21</span></li>
+        <li class="isili1"><em class="isiem1 isiem2">￥2950.00</em><span class="isisp1">商业险</span><span class="isisp2">2017-03-22 至 2018-03-21</span></li>
+        <li><em class="isiem1">￥1230.00</em><span class="isisp1">车辆损失险</span><span class="isisp2">投保</span></li>
+        <li><em class="isiem1">￥1950.00</em><span class="isisp1">第三者责任险</span><span class="isisp2">50万</span></li>
+        <li><em class="isiem1">￥230.00</em><span class="isisp1">全车盗抢险</span><span class="isisp2">投保</span></li>
+        <li><em class="isiem1">￥230.00</em><span class="isisp1">司机责任险</span><span class="isisp2">5万</span></li>
+        <li><em class="isiem1">￥230.00</em><span class="isisp1">乘客责任险</span><span class="isisp2">5万</span></li>
+        <li><em class="isiem1">￥130.00</em><span class="isisp1">玻璃破碎险</span><span class="isisp2">国产</span></li>
+        <li><em class="isiem1">￥130.00</em><span class="isisp1">自燃损失险</span><span class="isisp2">20万</span></li>
+        <li><em class="isiem1">￥130.00</em><span class="isisp1">车身划痕险</span><span class="isisp2">1万</span></li>
+        <li><em class="isiem1">￥130.00</em><span class="isisp1">涉水险</span><span class="isisp2">投保</span></li>
+        <li><em class="isiem1">￥130.00</em><span class="isisp1">指定专修厂</span><span class="isisp2">投保</span></li>
+        <li><em class="isiem1">￥130.00</em><span class="isisp1">无法找到第三方</span><span class="isisp2">10万</span></li>
+        <li><p>不计免赔（车损、三者、盗抢、划痕）</p><em class="isiem1">￥1200.00</em><span class="isisp1">&nbsp;</span><span class="isisp2">1万</span></li>
+    </ul> -->
+</article>
+<article class="confirmat">
+    <h3 class="confirm"><a href="###" id="updateInsureInfo"><i></i>修改</a>被保险人信息</h3>
+    <div>
+        <p><span class="isspanl">姓名：</span><span class="isspanr" id="vc2Insured">刘一手</span></p>
+        <p><span class="isspanl">手机号：</span><span class="isspanr" id="vc2Tel">13212341234</span></p>
+        <p><span class="isspanl">身份证：</span><span class="isspanr" id="vc2Code">370687199112256789</span></p>
+    </div>
+</article>
+<article class="confirmat">
+    <h3 class="confirm">投保人信息</h3>
+    <p class="confirm1">同被保险人信息</p>
+</article>
+<button class="confirmbtn">确定</button>
+
+<!--弹出框-->
+<div class="lady"></div>
+<div class="popbox" style="display:none">
+ <p id="messageId">为了保障您与投保人的权益请完善您的身份信息。</p>
+ <article class="cent"><a href="###" class="qx">取消</a><a href="javascript:void(0)" class="mqd">确定</a></article>
+</div>
+</body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/form.js"></script>
+<script src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/getUrl.js"></script>
+<script src="../../js/order/confirmInsureInfoy.js"></script>
+<script type="text/javascript">
+     $(function(){
+        /* $('.lady').height($(document).height());
+        $('.confirm a').click(function() {
+            $('.lady').show();
+            $('.popbox').show();
+        })
+        $('.popbox article .qx').click(function () {
+            $('.lady').hide();
+            $('.popbox').hide();
+        }) */
+    })
+    
+    function showMessage(message){
+		$('.lady').show();
+		$('.popbox').show();
+		$('#messageId').html(message);
+		$('.popbox article .qx').click(function () {
+            $('.lady').hide();
+            $('.popbox').hide();
+        })
+		$('.popbox article .mqd').click(function () {
+		      $('.lady').hide();
+		      $('.popbox').hide();
+		      
+		      
+		})
+	}
+</script>

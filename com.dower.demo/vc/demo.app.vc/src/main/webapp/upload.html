@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/ajax/js/jquery.min.js"></script>
+    <script src="/ajax/js/util.js"></script>
+    <script src="/ajax/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/ajax/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="demo ui-sortable" style="min-height: 223px;">
+    <div class="lyrow">
+        <div class="view">
+            <div class="row clearfix">
+                <div class="col-md-12 column ui-sortable">
+                    <!--<div class="box box-element ui-draggable" style="display: block;">
+                        <div class="view">
+                            <div class="panel-group" id="panel-240679">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-240679" href="#panel-element-113796" contenteditable="true">Collapsible Group Item #1</a>
+                                    </div>
+                                    <div id="panel-element-113796" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body" contenteditable="true">Anim pariatur cliche...</div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a class="panel-title" data-toggle="collapse" data-parent="#panel-240679" href="#panel-element-904662" contenteditable="true">Collapsible Group Item #2</a>
+                                    </div>
+                                    <div id="panel-element-904662" class="panel-collapse in" style="height: auto;">
+                                        <div class="panel-body" contenteditable="true">Anim pariatur cliche...</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>-->
+                    <div class="box box-element ui-draggable" >
+                        <div class="view">
+
+                            <ul class="breadcrumb">
+                                <li>
+                                    <a href="javascript:;" contenteditable="true" onclick="getFileList();">文件列表</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" contenteditable="true" onclick="getImageList();">图片列表</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" contenteditable="true" onclick="fileUpload();">文件上传</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" contenteditable="true" onclick="fileUpload();">图片上传</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!--文件列表-->
+
+                        <div class="view" id="fileList" style="display: none;">
+                            <table class="table" contenteditable="true">
+                                <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>名称</th>
+                                    <th>备注</th>
+                                    <th>路径</th>
+                                    <th>上传时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody id="bodyData">
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 上传文件 -->
+                        <div class="view" id="fileUpload" style="display: none">
+                            <form action="/uploadfile/uploadImge.do" method="post"
+                                  enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label >备注</label>
+                                    <input type="text" class="form-control" name="remarks" placeholder="最多三十个字符"></div>
+                                <div class="form-group" id="formDiv">
+                                    <!--<label for="">选择上传文件</label>-->
+                                    <span><input type="file" name="pic0"><a class="btn btn-default"
+                                                                            onclick="plusSpan()">+</a></span>
+                                </div>
+                                <button type="submit" class="btn btn-default">上传</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--<form action="http://localhost:8080/uploadfile/uploadImge.do" method="post" enctype="multipart/form-data">
+    <div id="formDiv">
+        <span><input name="pic0" type="file"><span class="plusSpan" onclick="plusSpan()">+</span></span>
+
+
+    </div>
+
+<button>上传</button>
+</form>-->
+<script>
+
+
+    var numFlag = 1;
+
+    function plusSpan() {
+        //var htmlString = '</br><span><input name="pic'+numFlag+++'" type="file"><span class="plusSpan" onclick="plusSpan()">+</span></span>';
+        var htmlString = '<span><input type="file" name="pic' + numFlag++ + '"><a class="btn btn-default" onclick="plusSpan()">+</a></span>';
+        $('#formDiv').append(htmlString);
+    }
+
+
+    function getImageList() {
+        $("#fileList").show();
+        $("#fileUpload").hide();
+        var params = {
+            "fileType": "2"
+        };
+        $.ajax({
+            type: "POST",
+            url: getUrl("uploadfile/queryImgeList.do"),
+            dataType: "json",
+            data: params,
+            async: false,
+            success: function (data) {
+                if (data.success == true) {
+                    var htmlString = "";
+                    $.each(data.list, function (n, v) {
+                        htmlString += '<tr><td>' + v.num_id + '</td><td>' + v.file_name + '</td><td>'+ (typeof(v.remarks)=="undefined"?"":v.remarks) +'</td><td>' + v.file_path + '</td><td>' + (typeof(v.dat_creat_time)=="undefined"?"":v.dat_creat_time)  + '</td><td><button class="btn btn-default" onclick="downloadFile(\'' + v.file_path + '\',\'' + v.file_name + '\');">下载</button></td></tr>';
+                    })
+                    $("#bodyData").html(htmlString);
+                } else {
+                    alert("异常错误!");
+                }
+            }
+        });
+    }
+    function getFileList() {
+        $("#fileList").show();
+        $("#fileUpload").hide();
+        var params = {
+            "fileType": "1"
+        };
+        $.ajax({
+            type: "POST",
+            url: getUrl("uploadfile/queryFileList.do"),
+            dataType: "json",
+            data: params,
+            async: false,
+            success: function (data) {
+                if (data.success == true) {
+                    var htmlString = "";
+                    $.each(data.list, function (n, v) {
+                        htmlString += '<tr><td>' + v.num_id + '</td><td>' + v.file_name + '</td><td>'+ (typeof(v.remarks)=="undefined"?"":v.remarks) +'</td><td>' + v.file_path + '</td><td>' + (typeof(v.dat_creat_time)=="undefined"?"":v.dat_creat_time) + '</td><td><button class="btn btn-default" onclick="downloadFile(\'' + v.file_path + '\',\'' + v.file_name + '\');">下载</button></td></tr>';
+                    })
+                    $("#bodyData").html(htmlString);
+                } else {
+                    alert("异常错误!");
+                }
+            }
+        });
+    }
+
+    function downloadFile(fileName, name) {
+        window.location.href = "uploadfile/download.do?fileName=" + fileName + "&name=" + name;
+    }
+
+    function fileUpload() {
+        var htmlStr = '<span><input type="file" name="pic0"><a class="btn btn-default" onclick="plusSpan()">+</a></span>';
+        $("#formDiv").html(htmlStr);
+        $("#fileList").hide();
+        $("#fileUpload").show();
+    }
+    $(document).ready(function() {
+        getFileList();
+    });
+</script>
+</body>
+</html>

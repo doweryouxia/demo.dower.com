@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>企业新车</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bodybg bdh">
+<header class="header"><h1>车辆信息</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<h2 class="isodc"><a href="javascript:void(0)" id="newCar" class="sela">新车</a><a href="javascript:void(0)" id="oldCar">旧车</a></h2>
+<article class="cityatc">
+    <div class="oldcity">所在城市：<span>北京<i>&nbsp;</i></span></div>
+    <div class="citycar"><p class="radiop"><span class=""></span><input type="radio" checked="checked" id="privateCar" name="carNature" value="0"/></p>个人车辆</div><div class="citycar"><p class="radiop"><span class="checkps1"></span><input type="radio" id="businessCar" name="carNature" value="1" /></p>企业车辆</div>
+</article>
+<article class="iodat">
+  <ul>
+      <li><span  class="iodatsp"><i>*</i><i id="carOwnerLabel">车主姓名</i>：</span><input type="text" id="carOwner" placeholder="请输入或识别" /><em class="iconphoto"></em></li>
+      <li><span  class="iodatsp"><i>*</i><i id="cardNoLabel">身份证号</i>：</span><input type="text" id="cardNo" placeholder="请输入或识别" /></li>
+      <li><span  class="iodatsp"><i>*</i>手机号码：</span><input type="text" id="phone" placeholder="请输入或识别" /></li>
+      <li><span  class="iodatsp">邮箱地址：</span><input type="text" id="email" placeholder="请选择或识别" /><em class="iconphoto1"></em></li>
+  </ul>
+</article>
+<article class="iodat iodath">
+  <ul>
+      <li id="oldCarNo" style="display:none;"><span  class="iodatsp"><i>*</i>车牌号：</span><input type="text" id="carNo" placeholder="请输入或识别" /><!-- <em class="iconphoto"></em> --></li>
+      <li><span  class="iodatsp"><i>*</i>车架号：</span><input type="text" id="carVin" placeholder="请输入或识别" /></li>
+      <li><span  class="iodatsp"><i>*</i>发动机号：</span><input type="text" id="engineNo" placeholder="请输入或识别" /></li>
+      <li><span  class="iodatsp"><i>*</i>品牌型号：</span><input type="text" id="brand" placeholder="请输入或识别" /></li>
+      <!-- <li><span  class="iodatsp"><i>*</i>合格证发票：</span><p class="updataphoto"><img src="../../images/icon19.png" alt=""></p><p class="updataphoto"><img src="../../images/icon20.png" alt=""></p><p class="updataphoto"><img src="../../images/icon21.png" alt=""></p></li> -->
+  </ul>
+</article>
+<p class="btp">带<i>*</i>为须填项</p>
+<button class="lgbtn lgbtnmb" id="nextBut">下一步</button>
+<!--出单成功弹框-->
+<div class="lady"></div>
+<div class="issuesuccess bodybg">
+    <header><a href="###"></a>购买成功</header>
+    <p>本保单投递已完成，购买流程已结束，感谢您的使用！</p>
+    <button>确定</button>
+</div>
+<article class="fotmenu">
+    <a href="javascript:void(0)" class="fotmenua01" id="indexBtn"><i></i><span>首页</span></a>
+    <a href="javascript:void(0)" class="fotmenua02 selea" id="carInfoBtn"><i></i><span>出单</span></a>
+    <a href="javascript:void(0)" class="fotmenua03" id="findBtn"><i></i><span>发现</span></a>
+    <a href="javascript:void(0)" class="fotmenua04" id="mineBtn"><i></i><span>我的</span></a>
+</article>
+</body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/form.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/interface.js"></script>
+<script type="text/javascript" src="../../js/getUrl.js"></script>
+<script src="../../js/quote/carInfo.js"></script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>发票</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bodybg bdh">
+<header class="header"><h1>发票</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<article class="invoiceat">
+    <h3>关于电子发票</h3>
+    <p>电子发票在保管、查询、调阅时更加方便，也便于为您消费者提供更加方便的服务；减少纸质发票的资源浪费现象，更加的环保，符合未来人类的发展。</p>
+    <p>电子发票是国家规范电子纳税的必然方式，这有利于国家对网络交易的监管，也有利于维护消费者的合法权益。</p>
+</article>
+<article class="cityatc addp">
+    <div class="planindiv"><div><p class="checkp"><span class="checkps1"></span><input type="radio" id="general" name="car" /></p>增值税普通发票</div><div><p class="checkp"><span class="checkps1"></span><input type="radio" id="special" name="car" /></p>增值税专用发票</div></div>
+</article>
+<h3 class="invoice special">企业开票信息</h3>
+<article class="iodat special">
+    <ul>
+        <li><span  class="iodatsp"><i>*</i>单位名称：</span><input type="text" id="VC2_TAXPAYER" placeholder="请输入或自动识别" /><em class="iconphoto"></em></li>
+        <li><span  class="iodatsp"><i>*</i>税号：</span><input type="text" id="VC2_TAXPAYER_NUMBER" placeholder="请输入或自动识别" /></li>
+        <li><span  class="iodatsp"><i>*</i>地址：</span><textarea id="VC2_TAXPAYER_ADDRESS" class="invoicarea" placeholder="请输入或自动识别" ></textarea></li>
+        <li><span  class="iodatsp"><i>*</i>开户行：</span><input id="VC2_TAXPAYER_BANK" type="text" placeholder="请输入" /></li>
+        <li><span  class="iodatsp"><i>*</i>账号：</span><input id="VC2_TAXPAYER_ACCOUNT" type="text" placeholder="请输入" /></li>
+        <li><span  class="iodatsp"><i>*</i>电话：</span><input id="VC2_TAXPAYER_PHONE" type="text" placeholder="请输入" /></li>
+        <!-- <li><span  class="iodatsp"><i>*</i>联系人：</span><input type="text" placeholder="请输入" /></li> -->
+    </ul>
+</article>
+<p class="btp special">带<i>*</i>为须填项</p>
+<h3 class="invoice special general">投递信息</h3>
+<article class="iodat special general">
+    <ul>
+        <li><span  class="iodatsp"><i>*</i>投递地址：</span><textarea id="VC2_POST_NAME" class="invoicarea"  placeholder="输入或自动带出被保险人地址" ></textarea></li>
+        <li><span  class="iodatsp"><i>*</i>收件人：</span><input id="VC2_POST_ADDRESS" type="text" placeholder="输入或自动带出被保险人姓名" /></li>
+        <li><span  class="iodatsp"><i>*</i>联系电话：</span><input id="VC2_POST_USERPHONE" type="number" placeholder="输入或自动带出被保险人姓名" /></li>
+    </ul>
+</article>
+
+<button class="lgbtn lgbtnmb">下一步</button>
+<article class="fotmenu">
+    <a href="javascript:void(0)" class="fotmenua01" id="indexBtn"><i></i><span>首页</span></a>
+    <a href="javascript:void(0)" class="fotmenua02 selea" id="carInfoBtn"><i></i><span>出单</span></a>
+    <a href="javascript:void(0)" class="fotmenua03" id="findBtn"><i></i><span>发现</span></a>
+    <a href="javascript:void(0)" class="fotmenua04" id="mineBtn"><i></i><span>我的</span></a>
+</article>
+</body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/form.js"></script>
+<script src="../../js/reg.js"></script>
+<script src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/getUrl.js"></script>
+<script src="../../js/quote/invoice.js"></script>

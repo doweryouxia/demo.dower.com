@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>订单</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" /> 
+    <script src="../../js/jquery.min.js"></script>
+     <script type="text/javascript">
+		$(function(){
+			var docHei = $(document).height();
+			var winHei = $(window).height();		
+			var diHeig = docHei - ($('#indexHD').height());			
+			$("#con").attr("style","height:"+diHeig+"px; overflow:auto");
+		});
+	</script>
+
+</head>
+<body style="overflow-y:hidden ">
+<div data-role="page" >	
+	<div data-role="header" data-theme="e" data-position="fixed"  data-fullscreen="true" class="indexHD">		
+		<header class="header"><h1>订单</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a></header>
+		<p class="ordernav">
+		<a href="javascript:void(0)" class="sel" id="">全部<i></i></a>
+		<a href="javascript:void(0)" id="7">未支付<i></i></a>
+		<a href="javascript:void(0)" id="8">已支付<i></i></a>
+		<a href="javascript:void(0)" id="9">已关闭<i></i></a>
+		</p>
+	</div>
+	<div data-role="main" id="orderMain" >		
+	 <ul data-role="listview" class="orderul" id="con"></ul>
+	</div>
+</div>
+<script src="../../js/getUrl.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/dataFormat.js"></script>
+<script src="../../js/mine/order.js"></script>
+  <script>
+	$(document).ready(function(){ 
+		bindAllEvent();   
+	});
+</script>
+</body>
+</html>
+
+

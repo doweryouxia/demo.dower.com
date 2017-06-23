@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>双录电子保单平台</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+    <link href="../../style/style2.css" type="text/css" rel="stylesheet" />
+    <link href="../../style/mobiscroll_002.css" rel="stylesheet" type="text/css">
+    <link href="../../style/mobiscroll.css" rel="stylesheet" type="text/css">
+    <link href="../../style/mobiscroll_003.css" rel="stylesheet" type="text/css">
+</head>
+<body class="bodybg bdh">
+<header class="header"><h1 onclick="getQuotes();">险种选择</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<ul class="carinfoul carinfoul3">
+    <li>
+        <span class="salaslisp">投保城市</span><input type="text" placeholder="北京" />
+    </li>
+</ul>
+<ul class="carinfoul carinfoul2">
+    <li>
+        <span class="salaslisp">车船税</span>
+        <a href="###" class="choicea">同意缴税</a>
+    </li>
+    <li>
+        <span class="salaslisp">交强险</span>
+        <a href="###" class="choicea">同意投保</a>
+    </li>
+    <li>
+        <span class="salaslisp"  for="appDate">保险期间</span>
+        <p class="selep datasel"><input type="text" placeholder="请选择" readonly="readonly" name="appDate" id="appDate" type="text"><span></span></p>
+    </li>
+</ul>
+<ul class="carinfoul carinfoul1 carinfoul2">
+    <li>
+        <p class="checkp carradio"><span class=""></span><input type="checkbox"  name="car" checked="checked" /></p>
+        <span class="salaslisp salaslisp1 insuracol">商业险</span>
+    </li>
+    <li>
+        <span class="salaslisp" for="appDateTime">保险期间</span>
+        <p class="selep datasel"><input type="text" placeholder="请选择" readonly="readonly" name="appDateTime" id="appDateTime" type="text"><span></span></p>
+    </li>
+</ul>    
+<ul class="carinfoul carinfoul1 carinfoul2" id="bizUl">    
+    <!-- <li>
+        <span class="salaslisp">车辆损失险</span><a href="###" class="bjmp">不计免赔</a>
+        <p class="selep"><input type="text" placeholder="不投保"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">第三者责任险</span><a href="###" class="bjmp bjmp1">不计免赔</a>
+        <p class="selep"><input type="text" placeholder="不投保" value="50万" class="inpcol"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">全车盗抢险</span><a href="###" class="bjmp">不计免赔</a>
+        <p class="selep"><input type="text" placeholder="不投保" value="投保" class="inpcol"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">司机责任险</span><a href="###" class="bjmp">不计免赔</a>
+        <p class="selep"><input type="text" placeholder="不投保" value="5万" class="inpcol"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">乘客责任险</span>
+        <p class="selep"><input type="text" placeholder="不投保" value="5万" class="inpcol"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">玻璃破碎险</span>
+        <p class="selep"><input type="text" placeholder="不投保"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">自燃损失险</span><a href="###" class="bjmp">不计免赔</a>
+        <p class="selep"><input type="text" placeholder="不投保" value="投保" class="inpcol"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">车身划痕险</span><a href="###" class="bjmp">不计免赔</a>
+        <p class="selep"><input type="text" placeholder="不投保" value="1万" class="inpcol"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">涉水险（发动机）</span>
+        <p class="selep"><input type="text" placeholder="不投保"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">指定专修厂</span>
+        <p class="selep"><input type="text" placeholder="不投保" value="投保" class="inpcol"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li>
+    <li>
+        <span class="salaslisp">车损无法找到第三方</span>
+        <p class="selep"><input type="text" placeholder="不投保" value="投保" class="inpcol"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+    </li> -->
+</ul>
+<button class="confirmbtn">确定</button>
+</body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/mobiscroll_002.js" type="text/javascript"></script>
+<script src="../../js/mobiscroll.js" type="text/javascript"></script>
+<script src="../../js/mobiscroll_003.js" type="text/javascript"></script>
+<script src="../../js/form.js"></script>
+<script src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/getUrl.js"></script>
+<script src="../../js/order/insurChoice.js"></script>
+<script>
+    $(function() {
+        //车牌选择
+        $('.carbrand select').change(function(){
+            $(this).prevAll('span').html($(this).find("option:selected").text());
+        });
+        //车牌号显示
+        $('.checkp').click(function(){
+            if($(this).children('span').hasClass('checkps1')){
+                $(this).find('input').attr('checked',true);
+                $(this).children('span').removeClass('checkps1');
+                $('.carinfoul1 li').show();
+            }else{
+                $(this).find('input').attr('checked',false);
+                $(this).children('span').addClass('checkps1');
+                $('.carinfoul1 li').hide();
+                $(this).parent('li').show();
+            }
+        });
+        //下拉框
+        $('.selep span select').change(function(){
+            $(this).parent('span').prevAll('input').val($(this).find("option:selected").text());
+        });
+      //日期
+        var currYear = (new Date()).getFullYear();
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'date'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'clickpick scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 10, //开始年份
+            endYear: currYear + 10 //结束年份
+        };
+
+        $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+        var optDateTime = $.extend(opt['datetime'], opt['default']);
+        var optTime = $.extend(opt['time'], opt['default']);
+        $("#appDateTime").mobiscroll(optDateTime);
+        $("#appTime").mobiscroll(optTime).time(optTime);
+    })
+</script>

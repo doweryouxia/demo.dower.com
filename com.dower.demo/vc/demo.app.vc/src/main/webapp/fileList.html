@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://localhost:8080/ajax/js/jquery.min.js"></script>
+    <style>
+        table
+        {
+            border-collapse:collapse;
+            width:600px;
+            height:200px;
+            margin:20px auto;
+        }
+
+        table,th, td
+        {
+            border: 1px solid black;
+        }
+    </style>
+    <script src="http://localhost:8080/ajax/js/util.js"></script>
+</head>
+<body>
+<div>
+    <button id="uploadBut">上传文件</button>
+</div>
+<table border="3em" >
+    <thead>
+    <tr  style="height:60px;">
+        <th>编号</th>
+        <th>文件名称</th>
+        <th>文件路径</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody id="bodyData">
+    </tbody>
+</table>
+<script>
+    $(function () {
+        $("#uploadBut").click(function () {
+            window.location.href="http://localhost:8080/upload.html";
+        });
+
+            var params = {
+                "fileType":"1"
+            };
+            $.ajax({
+                type : "POST",
+                url : "http://localhost:8080/uploadfile/queryFileList.do",
+                dataType : "json",
+                data : params,
+                async: false,
+                success : function(data) {
+                    if(data.success == true){
+                        var htmlString ="";
+                        $.each(data.list,function (n,v) {
+                            htmlString += '<tr><td>'+v.num_id+'</td><td>'+v.file_name+'</td><td>'+v.file_path+'</td><td><button onclick="downloadFile(\''+v.file_path+'\',\''+v.file_name+'\');">下载</button></td></tr>';
+                        })
+                        $("#bodyData").html(htmlString);
+                    }else{
+                        alert("异常错误!");
+                    }
+                }
+            });
+    })
+
+    function downloadFile(fileName,name) {
+        window.location.href="http://localhost:8080/uploadfile/download.do?fileName="+fileName+"&name="+name;
+//        $.ajax({
+//            type : "POST",
+//            url : "http://localhost:8080/uploadfile/download.do",
+//            dataType : "json",
+//            data : {'fileName':fileName},
+//            async: false,
+//            success : function(data) {
+//                alert("文件下载成功！"+JSON.stringify(data));
+//            }
+//        });
+    }
+</script>
+</body>
+</html>

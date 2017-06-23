@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>订单详情</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+    .orderat3 p{width:50%; }
+    </style>
+</head>
+<body class="bodybg bdh">
+<header class="header"><h1>订单详情</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a></header>
+<h3 class="odxtit"><span class="odxtitsp2" id="payStatus"></span><span class="odxtitsp1">订单号：<span id="orderNo"></span></span></h3>
+<article class="orderat1">
+    <span class="orderatsp1" id="insurCompany"></span>
+    <p class="orderatp1"><span class="orderatsp2"></span></p>
+</article>
+<div id="policyList">
+	 <article class="orderat2">
+	    <p class="orderat2p1"><span class="orderat2sp2" id="jqxMoney"></span><span class="orderat2sp1">交强险</span></p>
+	    <p class="orderat2p2" id="jqxDate"></p>
+	</article>
+	<article class="orderat2" id="sxyArticle" style="display: none">
+	    
+	</article> 
+
+	<section class="orderxq" style="display:none; ">
+	    <!--<article class="orderat3" style="display:none;" id="xz02">
+	        <span class="orderat3sp1">车辆损失险</span>
+	        <p><em>保额：</em><span>158012.00</span></p><p><em class="orderat3em1">保费：</em><span>2500.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;" id="xz03">
+	        <span class="orderat3sp1">第三方责任险</span>
+	        <p><em>保额：</em><span>30万</span></p><p><em class="orderat3em1">保费：</em><span>853.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">全车盗抢险</span>
+	        <p><em>保额：</em><span>30万</span></p><p><em class="orderat3em1">保费：</em><span>511.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">全车盗抢险</span>
+	        <p><em>保额：</em><span>30万</span></p><p><em class="orderat3em1">保费：</em><span>511.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">车上人员责任险（司机）</span>
+	        <p><em>保额：</em><span>1万</span></p><p><em class="orderat3em1">保费：</em><span>25.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">车上人员责任险（乘客）</span>
+	        <p><em>保额：</em><span>1万/4座</span></p><p><em class="orderat3em1">保费：</em><span>62.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">玻璃单独破碎险</span>
+	        <p><em>保额：</em><span>国产玻璃</span></p><p><em class="orderat3em1">保费：</em><span>63.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">自燃损失险</span>
+	        <p><em>保额：</em><span>&nbsp;</span></p><p><em class="orderat3em1">保费：</em><span>93.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">车身划痕损失险</span>
+	        <p><em>保额：</em><span>2000</span></p><p><em class="orderat3em1">保费：</em><span>374.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">指定修理厂险</span>
+	        <p><em>保额：</em><span>&nbsp;</span></p><p><em class="orderat3em1">保费：</em><span>100.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">发动机涉水损失险</span>
+	        <p><em>保额：</em><span>&nbsp;</span></p><p><em class="orderat3em1">保费：</em><span>123.00</span></p>
+	    </article>
+	    <article class="orderat3" style="display:none;">
+	        <span class="orderat3sp1">机动车损失保险无法找到第三方特约险</span>
+	        <p><em>保额：</em><span>&nbsp;</span></p><p><em class="orderat3em1">保费：</em><span>374.00</span></p>
+	    </article>
+    	<article class="orderat4">
+        	<p class="discount">优惠信息</p>
+        	<div class="discount1">
+        		<p><em>折扣：</em><span>8.8折</span></p>
+        	<p><em>赠品：</em><span>100L加油卡一张</span></p></div>
+    	</article>-->
+</section>
+</div>
+<h3 class="carzinfo"><a href="javascript:void(0)">更多</a> 车辆与车主信息</h3>
+<article class="carzinfoat carzinfoath">
+    <p id="ownerName"></p>
+    <p>车牌号：<font id="autoCode"></font></p>
+    <!-- <p>联系方式：<font id="phoneNum"></font></p> -->
+    <p id="certCode"></p>
+    <!-- <p>邮箱地址：<font id="mailBox"></font></p> -->
+    <p>车架号：<font id="vin"></font></p>
+    <p>发动机号：<font id="enginNum"></font></p>
+    <p>品牌型号：<font id="brand"></font></p>    
+    <p class="newCar">合格证发票：</p>
+    <p class="newCar invoiceimg"><img id="imgHGZ" alt=""><img id="imgFP" alt=""></p>
+</article>
+<!-- <h3 class="carzinfo" id="insurInfo">被保险人信息</h3>
+<article class="carzinfoat carzinfoath">
+    <p id="insurName"></p>
+    <p>联系方式：<font id="insurTel"></font></p>
+    <p id="insurCode"></p> 
+    <p>邮箱地址：<font id="insurMail"></font></p>       
+</article> -->
+<h3 class="carzinfo">投保人信息</h3>
+<article class="orderat1">
+	<p>同车主信息</p>
+</article>
+<h3 class="dzhinfo">单证信息</h3>
+<p class="dzhp" ><a href="javascript:void(0)" id="policyLinkBtn"><i></i>保单</a></p>
+<!-- <p class="dzhp"><a href="###"><i></i>电子保单</a></p>
+<p class="dzhp"><a href="###"><i></i>免责告知单</a></p>
+<p class="dzhp"><a href="###"><i></i>费率告知单</a></p> -->
+<footer class="fotorder"><a href="javascript:void(0)" class="fotorder1" id="telBtn">联系投保人</a><a href="javascript:void(0)" class="fotorder2" id="payBtn">再次购买</a></footer>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/dataFormat.js"></script>
+<script type="text/javascript" src="../../js/form.js"></script>
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/getUrl.js"></script>
+<script type="text/javascript" src="../../js/mine/detail.js?v=201705081603"></script>
+</body>
+</html>

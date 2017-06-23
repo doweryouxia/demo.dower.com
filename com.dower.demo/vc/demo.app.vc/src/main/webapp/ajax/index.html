@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>双录电子保单平台</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bodybg bdh">
+<header class="header"><h1>双录电子保单平台</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<div class="addWrap">
+    <div class="swipe" id="mySwipe">
+        <div class="swipe-wrap">
+            <div><a href="javascript:;"><img class="img-responsive" src="../../images/img01.jpg"/></a></div>
+            <div><a href="javascript:;"><img class="img-responsive" src="../../images/img02.jpg" /></a></div>
+            <div><a href="javascript:;"><img class="img-responsive" src="../../images/img01.jpg"/></a></div>
+            <div><a href="javascript:;"><img class="img-responsive" src="../../images/img02.jpg" /></a></div>
+            <div><a href="javascript:;"><img class="img-responsive" src="../../images/img02.jpg" /></a></div>
+        </div>
+    </div>
+    <ul id="position">
+        <li class="cur"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="menu">
+    <a href="###" class="menu1"><img src="../../images/icon25.png" alt=""><p>下载保单</p></a>
+    <a href="###" class="menu2"><img src="../../images/icon24.png" alt=""><p>救援拖车</p></a>
+    <a href="###" class="menu3"><img src="../../images/icon26.png" alt=""><p>服务网点</p></a>
+    <a href="###" class="menu4"><img src="../../images/icon23.png" alt=""><p>在线客服</p></a>
+    <a href="###" class="menu5"><img src="../../images/icon27.png" alt=""><p>添加菜单</p></a>
+</div>
+<h2 class="newtit"><span><i></i>最新动态</span></h2>
+<article class="newcont">
+    <dl>
+        <dt><img src="../../images/newimg01.jpg" alt=""></dt>
+        <dd>
+            <h3>人保车险年终大促，续保可得保养代金券！</h3>
+            <p><em>2016-12-25</em><span>人保动态</span></p>
+        </dd>
+    </dl>
+    <dl>
+        <dt><img src="../../images/newimg02.jpg" alt=""></dt>
+        <dd>
+            <h3>汽车费改后，如何才能真正投好车险？</h3>
+            <p><em>2016-12-25</em><span>人保动态</span></p>
+        </dd>
+    </dl>
+    <dl>
+        <dt><img src="../../images/newimg03.jpg" alt=""></dt>
+        <dd>
+            <h3>人保周末穿越京东大峡谷活动招集</h3>
+            <p><em>2016-12-25</em><span>人保动态</span></p>
+        </dd>
+    </dl>
+    <dl>
+        <dt><img src="../../images/newimg04.jpg" alt=""></dt>
+        <dd>
+            <h3>人保财险保费突破三千亿，年度最佳保险颁奖</h3>
+            <p><em>2016-12-25</em><span>人保动态</span></p>
+        </dd>
+    </dl>
+    <dl>
+        <dt><img src="../../images/newimg02.jpg" alt=""></dt>
+        <dd>
+            <h3>人保财险广西分公司马拉松赛</h3>
+            <p><em>2016-12-25</em><span>人保动态</span></p>
+        </dd>
+    </dl>
+</article>
+<article class="fotmenu">
+    <a href="###" class="fotmenua01 selea"><i></i><span>首页</span></a>
+    <a href="###" class="fotmenua02"><i></i><span>出单</span></a>
+    <a href="###" class="fotmenua03"><i></i><span>发现</span></a>
+    <a href="###" class="fotmenua04"><i></i><span>我的</span></a>
+</article>
+</body>
+</html>
+<script src='js/focus.js' type="text/javascript"></script>
+<script type="text/javascript">
+    var bullets = document.getElementById('position').getElementsByTagName('li');
+    var banner = Swipe(document.getElementById('mySwipe'), {
+        auto: 3000,
+        continuous: true,
+        disableScroll:false,
+        callback: function(pos) {
+            var i = bullets.length;
+            while (i--) {
+                bullets[i].className = ' ';
+            }
+            bullets[pos].className = 'cur';
+        }
+    })
+</script>

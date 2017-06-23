@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>个人信息</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+    <style>
+	div img {
+	    border-radius: 80%;
+	    height: 150px;
+	    width: 150px;
+	    margin: 50px;
+	    border: 2px #999 solid;
+	}
+	.list {  
+	    position: absolute;  
+	    top: 0;  
+	    left: 0;  
+	    z-index: 9;  
+	    background: rgba(0,0,0,0.4);  
+	    width: 100%;  
+	    height: 100%;  
+	    display: none;
+	}  
+	list-close {  
+	    position: absolute;  
+	    top: 0;  
+	    left: 0;  
+	    width: 100%;  
+	    height: 100%;  
+	}  
+	.slide {  
+		display:none;
+	    position: absolute;  
+	    bottom: 0;  
+	    left: 0;  
+	    width: 100%;  
+	    background: #f8f8f8;  
+	}  
+	.list-all-btn {  
+	    text-align: center;  
+	    color: #808080;  
+	    font-size: 12px;  
+	    height: 44px;  
+	    line-height: 44px;  
+	    border-bottom: 1px solid #e3e2e7;  
+	}  
+	.cancel-btn {  
+	    font-size: 20px;  
+	    line-height: 45px;  
+	    /* border-top: 1px solid #e3e2e7;  */ 
+	    color: #000;  
+	    text-align: center;  
+	    margin-top: 20px;  
+	    background: #fff;  
+	} 	
+	</style>
+</head>
+<body class="bodybg mb">
+<header class="header"><h1>个人信息</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<div style="text-align: center;"><img id="headImgPath" src="../../images/headImg.jpg"/></div>
+<ul class="systemul pinfo">
+   <!--  <li ><a href="javascript:void(0)"><em></em><i class="systemi1"></i><span class="pinfosp1">头像</span></a></li> -->
+    <li><span class="pinfosp2" id="agentName"></span><span class="pinfosp1">姓名</span></li>
+    <li><span class="pinfosp2" id="agentCode"></span><span class="pinfosp1">账号</span></li>
+</ul>
+<article class="fotmenu">
+    <a href="javascript:void(0)" class="fotmenua01" id="indexBtn"><i></i><span>首页</span></a>
+    <a href="javascript:void(0)" class="fotmenua02" id="carInfoBtn"><i></i><span>客户</span></a>
+    <a href="javascript:void(0)" class="fotmenua03" id="findBtn"><i></i><span>发现</span></a>
+    <a href="javascript:void(0)" class="fotmenua04 selea" id="mineBtn"><i></i><span>我的</span></a>
+</article>
+<div class="list">  
+    <div class="list-close"></div>  
+    <section class="slide">  
+        <!-- <p class="list-all-btn">xxx</p>  
+        <div class="list-wrap"></div>  --> 
+        <p class="cancel-btn" id="photoBtn">拍照</p>
+		<p class="cancel-btn" id="albumBtn">相册图片选择</p>
+       <p class="cancel-btn" id="cancelBtn">取消</p>  
+    </section>  
+</div> 
+<!--弹出框-->
+<div class="lady"></div>
+<div class="prom">错误提示</div>
+<div class="popbox" style="display:none">
+ <p id="messageId"></p>
+ <article class="cent"><a href="javascript:void(0)" class="mqd">确定</a></article>
+</div>
+<!--弹出框-->
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/getUrl.js"></script>
+<script src="../../js/interface.js"></script>
+<script src="../../js/mine/personInfo.js"></script>
+</body>
+</html>

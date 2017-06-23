@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dower.demo.app.core.dao.UploadFileMapper">
+
+    <insert id="insertUploadFile" parameterType="map">
+        INSERT INTO file_upload (file_name, file_path,file_type,remarks) VALUES (#{file_name},#{file_path},#{file_type},#{remarks})
+    </insert>
+
+    <select id="queryFileList" resultType="map" parameterType="map">
+       SELECT t.num_id,t.file_name,t.remarks,t.file_path,t.file_type,date_format(t.dat_creat_time,'%Y-%c-%d %h:%i:%s') dat_creat_time from file_upload t where t.file_type=#{file_type}
+    </select>
+</mapper>

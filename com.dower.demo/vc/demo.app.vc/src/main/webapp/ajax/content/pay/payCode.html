@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>个人信息</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bodybg mb">
+<header class="header"><h1>微信支付</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<div class="codediv">
+    <p class="code1">待付金额：<em id="realityPrice"></em></p>
+    <p class="code2" onclick="goPay();"><img src="../../images/codeimg.png" alt=""><br><span>请点击二维码进行支付</span></p>
+</div>
+<article class="fotmenu">
+    <a href="javascript:void(0)" class="fotmenua01 selea" id="indexBtn"><i></i><span>首页</span></a>
+    <a href="javascript:void(0)" class="fotmenua02" id="carInfoBtn"><i></i><span>出单</span></a>
+    <a href="javascript:void(0)" class="fotmenua03" id="findBtn"><i></i><span>发现</span></a>
+    <a href="javascript:void(0)" class="fotmenua04" id="mineBtn"><i></i><span>我的</span></a>
+</article>
+</body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/getUrl.js"></script>
+<script src="../../js/pay/paycode.js"></script>

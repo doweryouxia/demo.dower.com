@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>中国人保财险</title>
+    <link href="../../style/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body id="top" class="bodybg bdh">
+<header class="header"><h1>中国人保财险</h1><a href="javascript:history.go(-1)" class="return"><i></i>返回</a><a href="###" class="headicon"></a></header>
+<article class="fotmenu">
+    <a href="javascript:void(0)" class="fotmenua01" id="indexBtn"><i></i><span>首页</span></a>
+    <a href="javascript:void(0)" class="fotmenua02 selea" id="carInfoBtn"><i></i><span>出单</span></a>
+    <a href="javascript:void(0)" class="fotmenua03" id="findBtn"><i></i><span>发现</span></a>
+    <a href="javascript:void(0)" class="fotmenua04" id="mineBtn"><i></i><span>我的</span></a>
+</article>
+
+<!-- 续保信息 -->
+<article class="insurance" id="xubaoInfo">
+    <p class="isp"><span class="ispr">车船税：<i>350.00</i></span><span class="ispl">交强险：<i>677.00</i></span></p>
+    <p class="isp"><span class="ispl">商业险：<i>5758.00</i></span></p>
+</article>
+<article class="insurance">
+    <p  class="details"><a href="javascript:void(0)" class=""><i></i><span>查看详情</span></a></p>
+</article>
+
+<!-- 险种信息列表 -->
+<section class="insurance1" style="display: none">
+  <ul>
+  
+<!-- 较强险start -->  		
+      <li><div class="insdiv"><em class="insm">677.00</em>
+          <p class="checkp"><span class="checkps1"></span><input id="forceInsurType" type="checkbox"></p>
+          <span class="instit">交强险</span>
+          <p class="date"><input type="date" placeholder="2017-01-20" id="forceDate" value="2017-01-20" class="inptxt"><em>生效</em><span></span></p>
+          <span class="insh"></span></div>
+          <div class="insdiv1">
+              <span class="insd1sp">350.00</span>
+              <p class="insd1p"><span>车船税</span><em>提示：按国家规定须与交强险同时购买</em></p>
+          </div>
+      </li>
+
+      <li><div class="insdiv"><em class="insm">5758.00</em>
+          <!-- <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p> -->
+          <span class="instit">商业险</span>
+          <p class="date"><input type="date" placeholder="2017-01-20" id="bizDate" value="2017-01-20" class="inptxt"><em>生效</em><span></span></p><span class="insh"></span></div>
+      </li>
+       </ul>   
+<!-- 较强险end -->        
+<!-- 商业险start -->      
+	<ul id="bizUl">  
+	<!-- 险种start -->	      
+       <!--<li><div class="insdiv">
+          <p class="checkp"><span class=""></span><input type="checkbox" checked="checked" /></p>
+          <span class="instit itf1">车辆损失险</span>
+          <span class="insh"></span></div>
+          <div class="insdiv2">
+              <span class="insd2sp">2500.00</span>
+              <span class="insd2sp1">保额：</span><p class="insd1p insd2p"><input type="text" value="00.00"></p>
+          </div>
+      </li>
+      <li><div class="insdiv">
+          <p class="checkp"><span class=""></span><input type="checkbox"checked="checked" /></p>
+          <span class="instit itf1">第三者责任险</span>
+          <span class="insh"></span></div>
+          <div class="insdiv2">
+              <span class="insd2sp">853.00</span>
+              <span class="insd2sp1">保额：</span><p class="insd1p insd2p selep"><input type="text" value="30万"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+          </div>
+      </li>
+      <li><div class="insdiv">
+          <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p>
+          <span class="instit itf1">全车盗抢险</span>
+          <span class="insh"></span></div>
+          <div class="insdiv2">
+              <span class="insd2sp">511.00</span>
+              <span class="insd2sp1">保额：</span><p class="insd1p insd2p"><input type="text" value="158012.00"></p>
+          </div>
+      </li>
+      <li><div class="insdiv">
+          <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p>
+          <span class="instit itf1">车上人员责任险（司机）</span>
+          <span class="insh"></span></div>
+          <div class="insdiv2">
+              <span class="insd2sp">25.00</span>
+              <span class="insd2sp1">保额：</span><p class="insd1p insd2p selep"><input type="text" value="1万"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p>
+          </div>
+      </li>
+      <li><div class="insdiv">
+          <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p>
+          <span class="instit itf1">车上人员责任险（乘客）</span>
+          <span class="insh"></span></div>
+          <div class="insdiv2">
+              <span class="insd2sp">62.00</span>
+              <span class="insd2sp1">保额：</span><p class="insd1p insd2p selep"><input type="text" value="1万"><span><select><option>20万</option><option>30万</option><option>40万</option><option>50万</option></select></span></p><span class="insd2sp1 pm">共4座</span>
+          </div>
+      </li>
+      <li><div class="insdiv">
+          <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p>
+          <span class="instit itf1">玻璃单独破碎险</span>
+          <span class="insh"></span></div>
+          <div class="insdiv2">
+              <span class="insd2sp">93.00</span>
+              <span class="insd2sp1">类型：</span><p class="insd1p insd2p selep"><input type="text" value="国产玻璃"><span><select><option>国产玻璃</option><option>国产玻璃</option><option>国产玻璃</option><option>50万</option></select></span></p>
+          </div>
+      </li>
+      <li><div class="insdiv"><em class="insm insmf1">93.00</em>
+          <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p>
+          <span class="instit itf1">自燃损失险</span>
+          <span class="insh"></span></div>
+      </li>
+      <li><div class="insdiv">
+          <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p>
+          <span class="instit itf1">车身划痕损失险</span>
+          <span class="insh"></span></div>
+          <div class="insdiv2">
+              <span class="insd2sp">93.00</span>
+              <span class="insd2sp1">保额：</span><p class="insd1p insd2p selep"><input type="text" value="2000.00"><span><select><option>2000.00</option><option>1</option><option>3</option><option>50万</option></select></span></p>
+          </div>
+      </li>
+      <li><div class="insdiv"><em class="insm insmf1">100.00</em>
+          <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p>
+          <span class="instit itf1">指定修理厂险</span>
+          <span class="insh"></span></div>
+      </li>
+      <li><div class="insdiv"><em class="insm insmf1">123.00</em>
+          <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p>
+          <span class="instit itf1">发动机涉水损失险</span>
+          <span class="insh"></span></div>
+      </li>
+      <li><div class="insdiv">
+          <p class="checkp"><span class="checkps1"></span><input type="checkbox"></p>
+          <span class="instit itf1">机动车损失保险无法找到第三方特约险</span>
+          <span class="insh"></span></div>
+          <div class="insdiv2"><em class="insm insmf1">123.00</em></div>
+      </li>
+      <li><div class="insdiv"><em class="insm insmf1">650.00</em>
+          <p class="checkp" id="notlose"><span class=""></span><input type="checkbox" checked="checked"></p>
+          <span class="instit itf1">不记免赔险</span>
+          <span class="insh"></span></div>
+          <dl class="insdiv3">
+              <dd>
+              	<p class="bluep" id="lose01">车损</p>
+              	<p class="bluep" id="lose02">三者</p>
+              	<p class="" id="lose03">盗抢</p>
+              	<p class="" id="lose04">司机</p>
+              	<p class="" id="lose05">乘客</p>
+              	<p class="" id="lose06">划痕</p>
+              	<p class="" id="lose07">自然</p>
+              	<p class="" id="lose08">涉水</p>
+              	<p class="" id="lose08">涉水</p>
+              	<p class="" id="lose03">盗抢</p>
+              	<p class="" id="lose04">司机</p>
+              	<p class="" id="lose05">乘客</p>
+              	<p class="" id="lose06">划痕</p>
+              	<p class="" id="lose07">自然</p>
+              	<p class="" id="lose08">涉水</p>
+              	<p class="" id="lose08">涉水</p>
+              </dd>
+             <dt>详情</dt>
+          </dl>
+      </li> -->
+<!-- 商业险种end -->      
+  </ul>
+  <ul id="bujimianUl">
+  </ul>
+</section>
+<button class="lgbtn lgbtnmb" id="quote">保费计算</button>
+<ul class="company" id="companyList">
+</ul>
+<!--返回顶部-->
+ <a href="#top" class="backtop"><img src="../../images/back.png" alt=""><span>返回顶部</span></a>
+
+<article class="fotmenu">
+    <a href="javascript:void(0)" class="fotmenua01 selea" id="indexBtn"><i></i><span>首页</span></a>
+    <a href="javascript:void(0)" class="fotmenua02" id="carInfoBtn"><i></i><span>出单</span></a>
+    <a href="javascript:void(0)" class="fotmenua03" id="findBtn"><i></i><span>发现</span></a>
+    <a href="javascript:void(0)" class="fotmenua04" id="mineBtn"><i></i><span>我的</span></a>
+</article>
+</body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/form.js"></script>
+<script src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/getUrl.js"></script>
+<script src="../../js/quote/insurChoice.js"></script>
